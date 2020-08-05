@@ -11,6 +11,7 @@ import { RegisterComponent } from './components/register/register.component';
 import { LoginComponent } from './components/login/login.component';
 import { ProfileComponent } from './components/profile/profile.component';
 import { PublicationsComponent } from './components/publications/publications.component';
+import { SurveyComponent } from './components/survey/survey.component';
 
 
 @NgModule({
@@ -23,6 +24,7 @@ import { PublicationsComponent } from './components/publications/publications.co
     LoginComponent,
     ProfileComponent,
     PublicationsComponent,
+    SurveyComponent,
 
   ],
   imports: [

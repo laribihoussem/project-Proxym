@@ -11,5 +11,11 @@ export class PublicationsComponent implements OnInit {
 
   ngOnInit(): void {
   }
+  currentVal="";
+  getVal(val) {
+    console.log(arguments)
+    console.log(val)
+    this.currentVal=val
+  }
 
 }

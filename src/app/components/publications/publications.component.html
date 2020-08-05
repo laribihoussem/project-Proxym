@@ -7,10 +7,14 @@
       <div class="col-md-8">
         <div class="form-group">
           <label for="publicatin" ><h2>write a publication: </h2></label>
-          <textarea class="form-control" rows="5" id="comment" placeholder="write your publication here!"></textarea>
+          <textarea class="form-control"  rows="4" id="box" #box placeholder="write your publication here!" [(ngModel)]="input-pub"></textarea>
         </div>
-        <button class="btn btn-info button_float" type="submit" name="button">publish</button>
-        <h2 class="espaced">view your colleague publications :</h2>
+        <button class="btn btn-info button_float" type="submit" (click)="getVal(box.value)" name="button" >publish</button>
+        <hr>
+        <h2 class="espaced">view Recent publications :</h2>
+        <div class="">
+          <p>{{ currentVal }}</p>
+        </div>
       </div>
     </div>
   </div>
