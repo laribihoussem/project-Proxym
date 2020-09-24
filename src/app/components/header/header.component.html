@@ -2,9 +2,16 @@
   <nav class="left">
     <a href="#menu"><span>Menu</span></a>
   </nav>
-  <a href="index.html" class="logo">Proxym-app</a>
+  <a href="index.html" class="logo">Proxym Motivation</a>
   <nav class="right">
-    <a href="#" class="button alt">Log in</a>
+    <ul id="log">
+      <li *ngIf="!userIsAuthentificated">
+        <a  routerLink="/login" class="button alt">Log in</a>
+      </li>
+      <li *ngIf="userIsAuthentificated">
+        <button class="button alt" (click)="onLogout()">Logout</button>
+      </li>
+    </ul> 
   </nav>
 </header>
 <!-- Menu -->
@@ -13,8 +20,10 @@
     <li role="presentation"><a routerLink="/home">Home</a></li>
     <li role="presentation"><a routerLink="/profile">Profile</a></li>
     <li role="presentation"><a routerLink="/publications">Publications</a></li>
-    <li role="presentation"><a routerLink="/register">Register</a></li>
-    <li role="presentation"><a routerLink="/login">login</a></li>
+    <li role="presentation"><a routerLink="/survey">Survey</a></li>
+    <!-- <li role="presentation"><a routerLink="/essai">Essai</a></li> -->
+    <li *ngIf="!userIsAuthentificated" role="presentation"><a routerLink="/register">Register</a></li>
+    <li *ngIf="!userIsAuthentificated" role="presentation"><a routerLink="/login">login</a></li>
 
 
   </ul>

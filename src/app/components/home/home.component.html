@@ -3,7 +3,7 @@
 <!-- Banner -->
   <section id="banner">
     <div class="content">
-      <h1>Proxym-app</h1>
+      <h1>EnjoyWorkingWithProxym</h1>
       <p>Live and work but do not forget to play,<br />to have fun in life and really enjoy it.</p>
       <ul class="actions">
         <li><a href="#one" class="button scrolly">Get Started</a></li>
@@ -11,9 +11,10 @@
     </div>
   </section>
 
+
 <!-- One -->
   <section id="one" class="wrapper">
-    <h1 class="centered">Destinations this year:</h1>
+    <h1 class="centered">Latest desitinations:</h1>
     <div class="inner flex flex-3">
       <div class="flex-item left">
         <div>
@@ -61,32 +62,16 @@
   <section id="three" class="wrapper">
     <h1 class="centered">Recent Publications</h1>
     <div class="inner flex flex-3">
-      <div class="flex-item box">
+      <div class="flex-item box" *ngFor="let pub of pubs">
         <div class="image fit">
-          <img src="assets/images/pic02.jpg" alt="" />
+          <img src="http://localhost:3300/{{ pub.imagePath }}" alt="" />
         </div>
         <div class="content">
-          <h3>Consequat</h3>
-          <p>Placerat ornare. Pellentesque od sed euismod in, pharetra ltricies edarcu cas consequat.</p>
-        </div>
-      </div>
-      <div class="flex-item box">
-        <div class="image fit">
-          <img src="assets/images/pic03.jpg" alt="" />
-        </div>
-        <div class="content">
-          <h3>Adipiscing</h3>
-          <p>Morbi in sem quis dui placerat Pellentesque odio nisi, euismod pharetra lorem ipsum.</p>
-        </div>
-      </div>
-      <div class="flex-item box">
-        <div class="image fit">
-          <img src="assets/images/pic04.jpg" alt="" />
-        </div>
-        <div class="content">
-          <h3>Malesuada</h3>
-          <p>Nam dui mi, tincidunt quis, accu an porttitor, facilisis luctus que metus vulputate sem magna.</p>
+          <h3>{{pub.title}}</h3>
+          <p>{{pub.publication}}</p>
         </div>
       </div>
     </div>
+    <h2 class="centered"><a routerLink="/publications">View more</a></h2>
+    
   </section>
